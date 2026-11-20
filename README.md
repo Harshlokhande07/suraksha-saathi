@@ -60,7 +60,7 @@ Built with a modern **Bento-Grid Dashboard design** inspired by premier accessib
 - **AI/Heuristics:** Dual engine (Rule-based Regex Heuristic Engine + Gemini API integration).
 
 ---
-- **Frontend URL:** [http://localhost:3000](https://suraksha-saathi-one.vercel.app/)
+- **Frontend URL:** (https://suraksha-saathi-one.vercel.app/)
 - **Backend API URL:** [http://localhost:5005](http://localhost:5005)
 
 
