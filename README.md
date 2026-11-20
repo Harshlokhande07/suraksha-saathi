@@ -60,36 +60,9 @@ Built with a modern **Bento-Grid Dashboard design** inspired by premier accessib
 - **AI/Heuristics:** Dual engine (Rule-based Regex Heuristic Engine + Gemini API integration).
 
 ---
-
-## 💻 Local Setup & Run Commands
-
-### 1. Install Dependencies
-```bash
-npm install
-```
-
-### 2. Environment Setup
-```bash
-cp .env.example .env
-```
-*(Optional: add `GEMINI_API_KEY` for AI heuristic analysis; otherwise the built-in expert rule engine handles all queries seamlessly).*
-
-### 3. Start Development Server (Frontend + Backend)
-```bash
-npm run dev
-```
 - **Frontend URL:** [http://localhost:3000](http://localhost:3000)
 - **Backend API URL:** [http://localhost:5005](http://localhost:5005)
 
-### 4. Build for Production
-```bash
-npm run build
-```
-
-### 5. Automated Self-Verification Suite
-```bash
-npx tsx scripts/verify_all.ts
-```
 
 ---
 
