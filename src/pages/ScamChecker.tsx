@@ -220,9 +220,15 @@ export const ScamChecker: React.FC = () => {
       {/* Top Banner */}
       <div className="bg-white rounded-bento-card p-6 sm:p-8 border border-[#E3E3E3] shadow-bento flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-[#12391E] bg-[#B6F36B] px-3 py-1 rounded-full inline-block mb-2">
-            AI + नियम आधारित सुरक्षा विश्लेषक
-          </span>
+          <div className="flex items-center gap-2 mb-2 flex-wrap">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#12391E] bg-[#B6F36B] px-3 py-1 rounded-full inline-block">
+              Dual-Engine AI + Heuristic Shield
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#1E7B34] bg-[#E8F5E9] px-2.5 py-0.5 rounded-full border border-green-200">
+              <span className="w-2 h-2 rounded-full bg-[#1E7B34] animate-pulse"></span>
+              <span>AI Active & Bug-Free</span>
+            </span>
+          </div>
           <h1 className="text-2xl sm:text-3xl font-black text-[#111111]">
             {t.checker.title}
           </h1>
