@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-page: #EDEDED;
+    --bg-container: #F6F6F6;
+    --bg-card: #FFFFFF;
+    --lime-hero: #B6F36B;
+    --dark-green: #12391E;
+    --text-primary: #111111;
+    --text-secondary: #555555;
+    --border-color: #E3E3E3;
+
+    font-size: 18px; /* Strict senior baseline */
+    font-family: 'Outfit', 'Inter', 'Noto Sans Devanagari', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  html.font-normal {
+    font-size: 18px;
+  }
+
+  html.font-large {
+    font-size: 20px;
+  }
+
+  html.font-xlarge {
+    font-size: 24px;
+  }
+
+  body {
+    background-color: #EDEDED;
+    color: #111111;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* High contrast mode for elderly with cataracts or low vision */
+  html.high-contrast-mode body {
+    background-color: #000000 !important;
+    color: #FFFFFF !important;
+  }
+
+  html.high-contrast-mode .bg-white,
+  html.high-contrast-mode .bg-\[\#F6F6F6\],
+  html.high-contrast-mode .bg-\[\#EDEDED\] {
+    background-color: #121212 !important;
+    color: #FFFFFF !important;
+    border-color: #FACC15 !important;
+  }
+
+  html.high-contrast-mode .text-\[\#111111\],
+  html.high-contrast-mode .text-\[\#555555\],
+  html.high-contrast-mode .text-stone-700 {
+    color: #FFFFFF !important;
+  }
+
+  /* Accessible focus indicators */
+  *:focus-visible {
+    outline: 3px solid #12391E;
+    outline-offset: 3px;
+  }
+
+  /* Buttons & touch targets */
+  button, a.button {
+    min-height: 48px;
+    touch-action: manipulation;
+  }
+
+  /* Smooth 150-200ms minimal transitions */
+  * {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+}
