@@ -1,13 +1,7 @@
-process.env.NODE_ENV = 'test';
-import app from '../server/index.js';
-import http from 'http';
-
 async function runTests() {
   console.log('=== STARTING AUTOMATED SELF-VERIFICATION SUITE ===\n');
 
-  const server = http.createServer(app);
-  await new Promise<void>((resolve) => server.listen(5001, resolve));
-  const baseUrl = 'http://localhost:5001';
+  const baseUrl = 'http://localhost:5005';
 
   let passCount = 0;
   let failCount = 0;
@@ -171,8 +165,10 @@ async function runTests() {
     );
 
     console.log(`\n=== VERIFICATION COMPLETE: ${passCount} PASSED, ${failCount} FAILED ===`);
-  } finally {
-    await new Promise<void>((resolve) => server.close(() => resolve()));
+    if (failCount > 0) process.exit(1);
+  } catch (e) {
+    console.error('Test execution error:', e);
+    process.exit(1);
   }
 }
 
